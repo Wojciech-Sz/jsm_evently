@@ -43,7 +43,7 @@ const OrderSchema = new Schema({
   },
   buyer: {
     type: Schema.Types.ObjectId,
-    ref: "",
+    ref: "User",
   },
 });
 
