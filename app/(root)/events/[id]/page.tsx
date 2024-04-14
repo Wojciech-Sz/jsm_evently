@@ -125,12 +125,12 @@ const EventDetails = async ({
         <h2 className="h2-bold">Related Events</h2>
         <Collection
           data={relatedEvents?.data}
-          emptyTitle="No Events Found"
+          emptyTitle="No Events Related"
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
-          limit={6}
-          page={1}
-          totalPages={2}
+          limit={3}
+          page={searchParams.page as string}
+          totalPages={relatedEvents?.totalPages}
         />
       </section>
     </>
