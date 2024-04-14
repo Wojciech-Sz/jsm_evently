@@ -109,6 +109,8 @@ export const handleError = (error: unknown) => {
   throw new Error(
     typeof error === "string"
       ? error
+      : error instanceof Error
+      ? error.message
       : JSON.stringify(error)
   );
 };

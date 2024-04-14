@@ -7,7 +7,7 @@ let cached = (global as any).mongoose || {
   promise: null,
 };
 
-export const connectToDB = async () => {
+export const connectToDataBase = async () => {
   if (cached.conn) return cached.conn;
 
   if (!MONGODB_URI)
